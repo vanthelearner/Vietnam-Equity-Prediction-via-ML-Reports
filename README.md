@@ -11,14 +11,16 @@ There are 3 main pipelines:
 
 
 
-*These models and ideas are mainly inspired by the paper [Empirical Asset Pricing via Machine Learning](https://academic.oup.com/rfs/article/33/5/2223/5758276) by Shihao Gu, Bryan Kelly, Dacheng Xiu*
+
 
 
 
 ## Quick overview of the reports in this repo:
-- Models Performance Review.pdf: Models have been applied (so far, there are more coming).
+- Models Performance Review.pdf: Models have been applied (so far, there are more coming). 
 - Features Dictionary.md: All the features that will be feed into the models.
 
+
+*These models and ideas are mainly inspired by the paper [Empirical Asset Pricing via Machine Learning](https://academic.oup.com/rfs/article/33/5/2223/5758276) by Shihao Gu, Bryan Kelly, Dacheng Xiu*
 (code will be uploaded soon)
 
 ## 1) System Overview
