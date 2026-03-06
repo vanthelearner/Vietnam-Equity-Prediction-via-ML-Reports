@@ -1,14 +1,4 @@
----
-title: Pipeline Visualization Pack
-date: 2026-03-05
-tags:
-  - fyp
-  - visualization
-  - pipeline1
-  - pipeline2
-  - pipeline3
-project: eap_data_to_model_master
----
+
 ## 1) System Overview
 
 > [!info]
