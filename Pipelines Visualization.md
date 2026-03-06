@@ -228,10 +228,6 @@ gantt
 
 ```
 
-> [!warning]
-> Benchmark overlap is shorter than panel coverage.
-> - rolling test union: `2010-08-31 -> 2025-07-31`
-> - benchmark monthly overlap: `2020-04-30 -> 2025-07-31`
 
 ## 6) Output Taxonomy
 
