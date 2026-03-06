@@ -97,11 +97,6 @@ pie showData
     "Test" : 284880
 ```
 
-> [!note]
-> The biggest drop happens in `process_stock`, mainly from:
-> - hole-date filtering,
-> - tradability screen,
-> - dropping rows without valid next-day target.
 
 ## 5) Pipeline 3 Preparation and Rolling Training Logic
 
