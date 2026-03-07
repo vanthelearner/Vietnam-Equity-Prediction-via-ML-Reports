@@ -2,31 +2,45 @@
 
 There are 3 main pipelines:
 
-### Pipeline 1: Pulling raw data from Bloomberg
+Pipeline 1: Pulling raw data from Bloomberg
 
-### Pipeline 2: Processing data & Exploration
+Pipeline 2: Processing data & Exploration
 
-### Pipeline 3: Appling ML models
+Pipeline 3: Appling ML models
 
+*(My code will be uploaded soon)*
 
-
-
-
-
-
-
-## Quick overview of the reports in this repo:
+## What's in this repo:
 - Models Performance Review.pdf: Models have been applied (so far, there are more coming). 
 - Features Dictionary.md: All the features that will be feed into the models.
 
 
-*These models and ideas are mainly inspired by the paper [Empirical Asset Pricing via Machine Learning](https://academic.oup.com/rfs/article/33/5/2223/5758276) by Shihao Gu, Bryan Kelly, Dacheng Xiu*
 
+*These models and ideas are mainly inspired by the paper [Empirical Asset Pricing via Machine Learning](https://academic.oup.com/rfs/article/33/5/2223/5758276) by Shihao Gu, Bryan Kelly, Dacheng Xiu*
 
 *My thesis will be focusing in testing out a new dataset, in a new market, and most important with improvement if possible*
 
+---
 
-(My code will be uploaded soon)
+Results of models as of 07/03/2026.
+## Headline Comparison Table
+
+**Prediction horizon reviewed:** 180 monthly out-of-sample periods from **2010-08-31** to **2025-07-31**
+
+| Model | R2 OOS Full | R2 OOS Large | R2 OOS Small | Mean Rank IC | Long-only Sharpe | Long-short Sharpe | Benchmark IR | LS Ann Ret |
+| ----- | ----------- | ------------ | ------------ | ------------ | ---------------- | ----------------- | ------------ | ---------- |
+| ENET  | 0.0044      | 0.0039       | -0.0003      | 0.0785       | 0.970            | 1.696             | 0.247        | 40.3%      |
+| PCR   | 0.0025      | 0.0004       | -0.0014      | 0.0545       | 0.825            | 1.146             | 0.098        | 32.8%      |
+| PLS   | 0.0008      | -0.0019      | -0.0034      | 0.0724       | 0.842            | 1.139             | 0.141        | 26.5%      |
+| GBRT  | -0.0183     | -0.0096      | -0.0170      | 0.0573       | 0.696            | 0.451             | -0.062       | 26.8%      |
+| RF    | -0.0235     | -0.0150      | -0.0102      | 0.0365       | 0.378            | 0.312             | -0.067       | 7.5%       |
+| OLS3  | -0.0113     | -0.0116      | -0.0124      | 0.0306       | 0.325            | -0.054            | -0.244       | 4.4%       |
+| OLS   | -0.0143     | -0.0588      | -0.0326      | 0.1044       | 1.265            | 1.301             | 0.034        | -4.5%      |
+
+*Although short selling is prohibited in VN, for the purpose of comparison I still include it in*
+
+
+---
 
 ## 1) System Overview
 
