@@ -26,6 +26,8 @@ Pipeline 3: Appling ML models
 - 07/03/2026 batch: I would call this batch "Kitchen Sink" batch (since there was no careful feature engineering, everything, every features got put into the models). 
 *more details in the "Models performance.pdf"*
 
+<u>This table is an quick overview of the performance metrics by all models</u>
+
 | Model | R2 OOS Full (monthly) | R2 OOS on large companies (monthly) | R2 OOS on small companies (monthly) | Mean Rank Information coefficient  | Long-only Annualized Sharpe | Long-short Annualized Sharpe | Benchmark Information ratio | Long-short Annualized Return |
 | ----- | ----------- | ------------ | ------------ | ------------ | ---------------- | ----------------- | ------------ | ---------- |
 | ENET  | 0.0044      | 0.0039       | -0.0003      | 0.0785       | 0.970            | 1.696             | 0.247        | 40.3%      |
@@ -37,6 +39,19 @@ Pipeline 3: Appling ML models
 | OLS   | -0.0143     | -0.0588      | -0.0326      | 0.1044       | 1.265            | 1.301             | 0.034        | 32.8%      |
 
 *Note: Although short selling is prohibited in VN, for the purpose of comparison I still include it in*
+
+<u>This table is the performance of market portfolios during the same period</u>
+
+| Benchmark          | Construction                                               | Weighting | Rebalance | Annualized Return | Sharpe |
+| ------------------ | ---------------------------------------------------------- | --------- | --------- | ----------------- | ------ |
+| `VN_Market_Index`  | Bloomberg VN market index level                            | Index     | None      | 7.7%              | 0.47   |
+| `Top30_Static_EW`  | Top 30 by market cap at the first test date (`2010-08-31`) | Equal     | Static    | 11.4%             | 0.59   |
+| `Top30_Static_VW`  | Top 30 by market cap at the first test date (`2010-08-31`) | Value     | Static    | 12.0%             | 0.63   |
+| `Top30_6MRebal_EW` | Top 30 by market cap, reselected every 6 months            | Equal     | 6-month   | 7.1%              | 0.43   |
+| `Top30_6MRebal_VW` | Top 30 by market cap, reselected every 6 months            | Value     | 6-month   | 7.9%              | 0.47   |
+
+
+<u>This table is the features importance that each model pick</u>
 
 | Model | Top 1                    | Top 2                  | Top 3              | Top 4                | Top 5                   |
 | ----- | ------------------------ | ---------------------- | ------------------ | -------------------- | ----------------------- |
