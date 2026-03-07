@@ -24,7 +24,7 @@ Pipeline 3: Appling ML models
 **Prediction horizon reviewed:** 180 monthly out-of-sample periods from **2010-08-31** to **2025-07-31**
 
 - 07/03/2026 batch: I would call this batch "Kitchen Sink" batch (since there was no careful feature engineering, everything, every features got put into the models). 
-*more details in the "Models performance.pdf"*
+*(more details in the "Models performance.pdf")*
 
 <u>This table is an quick overview of the performance metrics by all models</u>
 
