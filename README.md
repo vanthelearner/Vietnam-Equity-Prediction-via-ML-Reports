@@ -23,7 +23,7 @@ Pipeline 3: Appling ML models
 ### Results
 **Prediction horizon reviewed:** 180 monthly out-of-sample periods from **2010-08-31** to **2025-07-31**
 
-- 07/03/2026 batch: I would call this batch "Kitchen Sink" appoarch (since there was no careful feature engineering, everything, every features got put into the models). 
+- 07/03/2026 batch: I would call this batch "Kitchen Sink" batch (since there was no careful feature engineering, everything, every features got put into the models). 
 *more details in the "Models performance.pdf"*
 
 | Model | R2 OOS Full (monthly) | R2 OOS on large companies (monthly) | R2 OOS on small companies (monthly) | Mean Rank Information coefficient  | Long-only Annualized Sharpe | Long-short Annualized Sharpe | Benchmark Information ratio | Long-short Annualized Return |
