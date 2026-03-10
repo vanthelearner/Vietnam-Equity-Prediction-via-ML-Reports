@@ -20,7 +20,7 @@ Pipeline 3: Appling ML models
 
 ---
 ### Data
-Monthly Vietnam Stocks Market from Ho Chi Minh Stock Exchange, and Hanoi Stock Exchange, start from 01-01-2000 to 28-02-2026 (total of unique stocks is 700 different stocks were used during the three pipelines).  
+Monthly Vietnam Stocks Market from Ho Chi Minh Stock Exchange, and Hanoi Stock Exchange, start from 01-01-2000 to 28-02-2026 (total of unique stocks is 700 different stocks that were used during the three pipelines).  
 
 ---
 
