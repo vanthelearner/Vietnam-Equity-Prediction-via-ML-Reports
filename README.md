@@ -8,7 +8,7 @@ Pipeline 2: Processing data & Exploration
 
 Pipeline 3: Appling ML models
 
-*(My code will be uploaded soon)*
+*(My code can be found [here]([url](https://github.com/vanthelearner/Vietnam-Equity-Market-Predicting)))*
 
 ### What's in this repo:
 - Models Performance.pdf: Models have been applied (so far, there are more coming). 
@@ -97,51 +97,6 @@ flowchart TB
 
 
 
-## 2) Filtering Funnel
-
-> [!info]
-> This is the best view for understanding where the stock sample gets cut down.
-
-```mermaid
-flowchart TB
-    A["Raw stock panel<br/>2,437,880 rows<br/>699 tickers<br/>100.0% of raw"]
-    B["After transform<br/>2,437,880 rows<br/>699 tickers<br/>100.0% of raw"]
-    C["After process_stock<br/>902,959 rows<br/>590 tickers<br/>37.0% of raw"]
-    D["After build_model_data<br/>787,953 rows<br/>441 tickers<br/>32.3% of raw"]
-
-
-    A --> B --> C --> D
-   
-```
-
-
-
-## 3) Pipeline 3 Preparation and Rolling Training Logic
-
-> [!info]
-> Pipeline 3 does not train directly on Pipeline 2 daily rows. It first converts them into a monthly panel, then applies another preprocessing layer, then rolls windows through time.
-
-```mermaid
-flowchart LR
-    A["Pipeline 2 daily model panel<br/>787,953 rows<br/>441 tickers"]
-    B["Prepare-input notebook<br/>group by ticker-month<br/>compound y_next_1d<br/>take month-end snapshot"]
-    C["panel_input.csv<br/>39,427 rows<br/>437 assets<br/>270 months"]
-    D["preprocess.py<br/>price/size filters<br/>coverage filter<br/>monthly median fill<br/>winsorize<br/>rank-scale"]
-    E["Full sample<br/>38,990 rows<br/>432 assets"]
-    F["Rolling windows<br/>60m train<br/>24m val<br/>12m test<br/>step 12m<br/>15 windows"]
-    G["Per-window model loop<br/>fit train<br/>choose on val<br/>refit train+val<br/>predict test"]
-
-    A --> B --> C --> D --> E --> F --> G
-```
-
-```mermaid
-flowchart LR
-    W1["Window k<br/>Train 60 months"] --> W2["Validate 24 months"]
-    W2 --> W3["Test 12 months"]
-    W3 --> W4["Shift forward 12 months"]
-    W4 --> W5["Build Window k+1"]
-    W5 --> W1
-```
 
 
 Rolling Window Logic (Pipeline 3)
@@ -246,24 +201,6 @@ gantt
 
 ```
 
-
-## 4) Output Taxonomy
-
-> [!info]
-> This view is for understanding where the model results are saved and what each output family means.
-
-```mermaid
-flowchart TD
-    A["Pipeline 3 run folder<br/>outputs/run_YYYYMMDD..."]
-
-    A --> B["predictions/<br/>yhat, y_true, per-window prediction files"]
-    A --> C["r2/<br/>OOS R2 summaries by model and sample"]
-    A --> D["importance/<br/>variable importance and complexity"]
-    A --> E["portfolio/<br/>deciles, long-only, long-short, turnover, net return"]
-    A --> F["benchmark/<br/>strategy vs benchmark comparisons"]
-    A --> G["compare/<br/>cross-model tables, DM results, merged summaries"]
-    A --> H["windows/<br/>chosen parameters and per-window metrics"]
-```
 
 
 
