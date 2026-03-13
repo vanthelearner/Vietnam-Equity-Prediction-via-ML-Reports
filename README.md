@@ -8,7 +8,7 @@ Pipeline 2: Processing data & Exploration
 
 Pipeline 3: Appling ML models
 
-*(My code can be found [here]([url](https://github.com/vanthelearner/Vietnam-Equity-Market-Predicting)))*
+*(My code can be found [here](https://github.com/vanthelearner/Vietnam-Equity-Market-Predicting))*
 
 ### What's in this repo:
 - Models Performance.pdf: Models have been applied (so far, there are more coming). 
